@@ -1,0 +1,41 @@
+
+
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Спамеры</h4>
+						
+                        <div class="navigation__sub">
+                            <a><button class="btn btn-info"> Добавить спамера</button></a>
+
+                            <ul class="navigation__sub__add-spammer" >
+								<form action="" method="post" onsubmit="" >
+									<li class="add-spammer__field-caption" >Логин</li>
+									<li><input class="form-control" type="text" name="log" /></li>
+									<li class="add-spammer__field-caption" >Пароль</li>
+									<li><input class="form-control" type="text" name="pass" /></li>
+									<li class="add-spammer__submit" ><input class="btn btn-info" type="submit" name="addSpamer" value="Добавить" /></li>
+								</form>
+                            </ul>
+                        </div>
+
+						<div class="table-responsive">
+							<div id="data-table_wrapper" class="dataTables_wrapper no-footer">
+								%table%
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<script>
+					function setBalance(id) {
+						var balance = prompt("Введите баланс: ");
+						
+						$.get(
+							"/admin?do=SetBalance&balance=" + balance + "&id=" + id,
+							function () {
+								window.location.href = window.location.href;
+							}
+						);
+					}
+				</script>

